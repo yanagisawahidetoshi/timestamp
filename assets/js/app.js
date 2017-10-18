@@ -24989,9 +24989,7 @@ var Timestamp = function () {
         this.target = this.base.getElementsByClassName('jsc-timestamp-target')[0];
 
         this.timeStamp = this.convTimestamp(date);
-
         this.setTimeStamp();
-
         this.bindEvents();
     }
 
