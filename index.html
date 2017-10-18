@@ -14,7 +14,9 @@
 	<div class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="/" class="navbar-brand">UNIX タイムスタンプ</a>
+				<a href="/" class="navbar-brand">
+				    <h1 class="pageTitle">UNIX タイムスタンプ</h1>
+				</a>
 			</div>
 			<div class="navbar-collapse collapse" id="navbar-main">
 				<div class="nav navbar-form navbar-right">
@@ -29,6 +31,16 @@
 	</div>
 </header>
 
-    <script type="text/javascript" src="/assets/js/app.js"></script>
+<main class="container">
+    <h2>現在のタイムスタンプ</h2>
+    <div class="input-group jsc-timestamp-default">
+        <input type="text" class="form-control jsc-timestamp-target">
+        <span class="input-group-btn">
+            <button class="btn btn-success" type="button">コピー</button>
+        </span>
+    </div><!-- /input-group -->
+</main>
+
+<script type="text/javascript" src="/assets/js/app.js"></script>
 </body>
 </html>

@@ -1,3 +1,9 @@
 .header {
     height: 80px;
 }
+.pageTitle {
+    font-size: inherit;
+    margin: auto;
+    line-height: inherit;
+    font-weight: inherit;
+}

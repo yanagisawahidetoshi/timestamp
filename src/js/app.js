@@ -1,5 +1,3 @@
-class hoge {
-    constructor() {
-        alert('A');
-    }
-}
+import Timestamp  from './timestamp';
+
+new Timestamp('jsc-timestamp-default');
