@@ -24983,8 +24983,8 @@ var Timestamp = function () {
 
         _classCallCheck(this, Timestamp);
 
-        this.base = base;
-        this.timeStamp = this.getTimestamp(date);
+        this.base = document.getElementsByClassName(base)[0];
+        this.timeStamp = this.convTimestamp(date);
 
         this.setTimeStamp();
     }
@@ -24999,7 +24999,7 @@ var Timestamp = function () {
     }, {
         key: 'setTimeStamp',
         value: function setTimeStamp() {
-            var target = document.getElementsByClassName(this.base)[0].getElementsByClassName('jsc-timestamp-target')[0];
+            var target = this.base.getElementsByClassName('jsc-timestamp-target')[0];
 
             target.value = this.timeStamp;
         }

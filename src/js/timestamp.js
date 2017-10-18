@@ -2,8 +2,8 @@ const Moment = require('moment');
 
 class Timestamp {
     constructor(base, date = null) {
-        this.base = base;
-        this.timeStamp = this.getTimestamp(date);
+        this.base = document.getElementsByClassName(base)[0];
+        this.timeStamp = this.convTimestamp(date);
         
         this.setTimeStamp();
     }
@@ -13,8 +13,7 @@ class Timestamp {
         }
     }
     setTimeStamp() {
-        const target = document.getElementsByClassName(this.base)[0]
-            .getElementsByClassName('jsc-timestamp-target')[0];
+        const target = this.base.getElementsByClassName('jsc-timestamp-target')[0];
         
         target.value = this.timeStamp;
     }
