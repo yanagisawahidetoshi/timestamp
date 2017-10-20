@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UNIXタイムスタンプ</title>
+    <meta description>現在のUNIXタイムスタンプを取得したり、任意の日付に変換したりするツール</meta>
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="/assets/css/app.css" type="text/css" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -33,8 +34,8 @@
 </header>
 
 <main class="container">
-	<section>
-	    <h2>現在のタイムスタンプ</h2>
+	<section class="bs-docs-section">
+	    <h2>現在のUNIXタイムスタンプ</h2>
 	    <div class="input-group jsc-timestamp-default">
 	        <input type="text" class="form-control jsc-timestamp-target jsc-timestamp-default-target">
 	        <span class="input-group-btn">
@@ -43,11 +44,11 @@
 	    </div>
     </section>
     
-    <section>
+    <section class="bs-docs-section">
 	    <h2>任意のUNIXタイムスタンプを変換</h2>
 	    <div class="jsc-any-timestamp">
 		    <div class="input-group">
-		        <input type="text" class="form-control jsc-any-timestamp-target">
+		        <input type="text" class="form-control jsc-any-timestamp-target" placeholder="1508482669">
 		        <span class="input-group-btn">
 		            <button class="btn btn-primary jsc-any-timestamp-trigger" type="button" data-clipboard-target=".jsc-timestamp-target">変換</button>
 		        </span>
@@ -61,10 +62,10 @@
 	    </div>
 	</section>
 	
-	<section>
+	<section class="bs-docs-section">
 		<h2>任意の日付をUNIXタイムスタンプに変換</h2>
 		
-		<div class="jsc-dateTimestamp">
+		<div class="row jsc-dateTimestamp">
 			<div class="col-xs-4 col-md-4">
 				<div class="input-group">
 		        	<input type="number" class="form-control jsc-dateTimestamp-year" value="2017">
@@ -105,12 +106,21 @@
 		    	</div>
 		    </div>
 		</div>
-	    <div class="input-group jsc-timestamp-date">
+	    <div class="input-group dateInput jsc-timestamp-date">
 	        <input type="text" class="form-control jsc-timestamp-target jsc-timestamp-date-target">
 	        <span class="input-group-btn">
 	            <button class="btn btn-success jsc-timestamp-copyTrigger" type="button" data-clipboard-target=".jsc-timestamp-date-target">コピー</button>
 	        </span>
 	    </div>
+	</section>
+	
+	<section class="bs-docs-section">
+		<h2>ブックマークレット</h2>
+		
+		<section>
+			<h3>アクティブなフォームへ現在のタイムスタンプを挿入</h3>
+			<pre>javascript:void((function(undefined){var date=new Date();var a=date.getTime();var b=Math.floor(a/1000);var current=document.activeElement;current.value=b})());</pre>
+		</section>
 	</section>
 </main>
 
