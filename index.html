@@ -32,13 +32,85 @@
 </header>
 
 <main class="container">
-    <h2>現在のタイムスタンプ</h2>
-    <div class="input-group jsc-timestamp-default">
-        <input type="text" class="form-control jsc-timestamp-target">
-        <span class="input-group-btn">
-            <button class="btn btn-success jsc-timestamp-copyTrigger" type="button" data-clipboard-target=".jsc-timestamp-target">コピー</button>
-        </span>
-    </div><!-- /input-group -->
+	<section>
+	    <h2>現在のタイムスタンプ</h2>
+	    <div class="input-group jsc-timestamp-default">
+	        <input type="text" class="form-control jsc-timestamp-target jsc-timestamp-default-target">
+	        <span class="input-group-btn">
+	            <button class="btn btn-success jsc-timestamp-copyTrigger" type="button" data-clipboard-target=".jsc-timestamp-default-target">コピー</button>
+	        </span>
+	    </div>
+    </section>
+    
+    <section>
+	    <h2>任意のUNIXタイムスタンプを変換</h2>
+	    <div class="jsc-any-timestamp">
+		    <div class="input-group">
+		        <input type="text" class="form-control jsc-any-timestamp-target">
+		        <span class="input-group-btn">
+		            <button class="btn btn-primary jsc-any-timestamp-trigger" type="button" data-clipboard-target=".jsc-timestamp-target">変換</button>
+		        </span>
+		    </div>
+		    <div class="input-group jsc-timestamp-any">
+		        <input type="text" class="form-control jsc-any-timestamp-dateTarget">
+		        <span class="input-group-btn">
+		            <button class="btn btn-success jsc-any-timestamp-copyTrigger" type="button" data-clipboard-target=".jsc-any-timestamp-dateTarget">コピー</button>
+		        </span>
+		    </div>
+	    </div>
+	</section>
+	
+	<section>
+		<h2>任意の日付をUNIXタイムスタンプに変換</h2>
+		
+		<div class="jsc-dateTimestamp">
+			<div class="col-xs-4 col-md-4">
+				<div class="input-group">
+		        	<input type="number" class="form-control jsc-dateTimestamp-year" value="2017">
+		        	<span class="input-group-addon" id="basic-addon2">年</span>
+		    	</div>
+		    </div>
+			<div class="col-xs-4 col-md-4">
+				<div class="input-group">
+					<select class="form-control jsc-dateTimestamp-month"></select>
+		        	<span class="input-group-addon" id="basic-addon2">月</span>
+		    	</div>
+		    </div>
+			<div class="col-xs-4 col-md-4">
+				<div class="input-group">
+					<select class="form-control jsc-dateTimestamp-day"></select>
+		        	<span class="input-group-addon" id="basic-addon2">日</span>
+		    	</div>
+		    </div>
+			<div class="col-xs-4 col-md-4">
+				<div class="input-group">
+					<select class="form-control jsc-dateTimestamp-hour"></select>
+		        	<span class="input-group-addon" id="basic-addon2">時</span>
+		    	</div>
+		    </div>
+			<div class="col-xs-4 col-md-4">
+				<div class="input-group">
+		        	<input type="number" class="form-control jsc-dateTimestamp-minute" value="0" min="0" max="59">
+		        	<span class="input-group-addon" id="basic-addon2">分</span>
+		    	</div>
+		    </div>
+			<div class="col-xs-4 col-md-4">
+				<div class="input-group">
+		        	<input type="number" class="form-control jsc-dateTimestamp-second" value="0" min="0" max="59">
+		        	<span class="input-group-addon" id="basic-addon2">秒</span>
+					<span class="input-group-btn">
+		            	<button class="btn btn-primary jsc-dateTimestamp-trigger" type="button" >変換</button>
+		        	</span>
+		    	</div>
+		    </div>
+		</div>
+	    <div class="input-group jsc-timestamp-date">
+	        <input type="text" class="form-control jsc-timestamp-target jsc-timestamp-date-target">
+	        <span class="input-group-btn">
+	            <button class="btn btn-success jsc-timestamp-copyTrigger" type="button" data-clipboard-target=".jsc-timestamp-date-target">コピー</button>
+	        </span>
+	    </div>
+	</section>
 </main>
 
 <script type="text/javascript" src="/assets/js/app.js"></script>
